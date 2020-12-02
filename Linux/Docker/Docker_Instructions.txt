@@ -1,0 +1,20 @@
+이미지를 컨테이너로 만드는 방법
+docker run -it --name centos-ssh(컨테이너이름) jdeathe/centos-ssh(이미지이름) /bin/bash(쉘경로)
+
+컨테이너를 새로운 이미지로 만드는 방법
+docker commit centos-ssh centos-ssh_20201116
+
+새로운 이미지를 배포용 이미지를 내 도커 아이디에 올리는 방법
+docker tag centos-ssh_20201116(이미지이름) dmsdndla/centos-ssh_20201116(내아이디/이미지이름)
+docker push dmsdndla/centos-ssh_20201116(내아이디/이미지이름)
+★ 파일의 이름이 ID/name 형식이면 업로드 되는듯
+
+내 컴퓨터에 배포용 이미지 만들기
+docker save centos-ssh_20201116 > centos-ssh_20201116.tar
+
+로컬디스크에 있는 이미지를 docker에 올리는 방법
+docker load --input centos-ssh_20201116.tar
+
+
+docker start centos(컨테이너이름)
+docker attach centos(컨테이너이름)

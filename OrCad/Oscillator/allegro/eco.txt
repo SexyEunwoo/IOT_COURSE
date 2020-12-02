@@ -1,0 +1,177 @@
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   1  |
+|------------------------------------------------------------------------------|
+|  17_A01_OSCILLATOR.brd                                                       |
+|                                                    Wed Nov 18 10:09:07 2020  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  +VCC         pins ADDED TO this new net
+                                 C4.1           U1.7           U2.7           
+                                 U3.7           U4.7           U5.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  -VCC         pins ADDED TO this new net
+                                 C6.2           U1.4           U2.4           
+                                 U3.4           U4.4           U6.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  GND          pins ADDED TO this new net
+                                 C2.2           C3.2           C4.2           
+                                 C5.1           C6.1           J1.2           
+                                 J2.2           R7.2           R8.2           
+                                 R10.2          U4.2           U5.2           
+                                 U6.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01134       pins ADDED TO this new net
+                                 C3.1           J2.1           U5.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01157       pins ADDED TO this new net
+                                 C5.2           J2.3           U6.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01382       pins ADDED TO this new net
+                                 C2.1           R2.1           U1.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01428       pins ADDED TO this new net
+                                 R7.1           U1.2           VR1.3          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01453       pins ADDED TO this new net
+                                 R5.1           U1.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01562       pins ADDED TO this new net
+                                 R2.2           VR1.1          VR1.2          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01639       pins ADDED TO this new net
+                                 C1.1           R1.1           R5.2           
+                                 U2.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01643       pins ADDED TO this new net
+                                 R8.1           U2.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N01831       pins ADDED TO this new net
+                                 R9.1           R10.1          U3.2           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N02086       pins ADDED TO this new net
+                                 R3.2           R9.2           
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   2  |
+|------------------------------------------------------------------------------|
+|  17_A01_OSCILLATOR.brd                                                       |
+|                                                    Wed Nov 18 10:09:07 2020  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  N02238       pins ADDED TO this new net
+                                 R6.1           U3.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N02341       pins ADDED TO this new net
+                                 R4.1           R6.2           U4.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  OUT          pins ADDED TO this new net
+                                 J1.1           R4.2           U4.6           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  SIG          pins ADDED TO this new net
+                                 C1.2           R1.2           R3.1           
+                                 U2.6           U3.3           
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   3  |
+|------------------------------------------------------------------------------|
+|  17_A01_OSCILLATOR.brd                                                       |
+|                                                    Wed Nov 18 10:09:07 2020  |
+|------------------------------------------------------------------------------|
+| COMPONENT DEFINITION added to board drawing                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    device type                                                               |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ CAP NP_CAP400_0.001UF
+ CAP NP_CAP400_0.1UF
+ CAP NP_CAP400_270PF
+ CON2_JUMPER2_CON2
+ CON3_JUMPER3_CON3
+ LF351_0_DIP8_3_LF351
+ LM7812/TO_4_TO92_LM7812/TO
+ LM7812/TO_5_TO92_LM7812/TO
+ RESISTOR VAR_POT_1M
+ R_RES400_100K
+ R_RES400_10K
+ R_RES400_62K
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   4  |
+|------------------------------------------------------------------------------|
+|  17_A01_OSCILLATOR.brd                                                       |
+|                                                    Wed Nov 18 10:09:07 2020  |
+|------------------------------------------------------------------------------|
+| COMPONENTS ADDED to board drawing                                            |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    ref des        |    device type                                           |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ C1                  CAP NP_CAP400_0.001UF 
+ C2                  CAP NP_CAP400_270PF   
+ C3                  CAP NP_CAP400_0.1UF   
+ C4                  CAP NP_CAP400_0.1UF   
+ C5                  CAP NP_CAP400_0.1UF   
+ C6                  CAP NP_CAP400_0.1UF   
+ J1                  CON2_JUMPER2_CON2     
+ J2                  CON3_JUMPER3_CON3     
+ R1                  R_RES400_100K         
+ R2                  R_RES400_10K          
+ R3                  R_RES400_10K          
+ R4                  R_RES400_10K          
+ R5                  R_RES400_62K          
+ R6                  R_RES400_10K          
+ R7                  R_RES400_10K          
+ R8                  R_RES400_10K          
+ R9                  R_RES400_10K          
+ R10                 R_RES400_10K          
+ U1                  LF351_0_DIP8_3_LF351  
+ U2                  LF351_0_DIP8_3_LF351  
+ U3                  LF351_0_DIP8_3_LF351  
+ U4                  LF351_0_DIP8_3_LF351  
+ U5                  LM7812/TO_4_TO92_LM7812/TO 
+ U6                  LM7812/TO_5_TO92_LM7812/TO 
+ VR1                 RESISTOR VAR_POT_1M   
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   5  |
+|------------------------------------------------------------------------------|
+|  17_A01_OSCILLATOR.brd                                                       |
+|                                                    Wed Nov 18 10:09:07 2020  |
+|------------------------------------------------------------------------------|
+| SLOT PROPERTIES added to board drawing                                       |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   slot_id    |   x   |   y   |   property   |             value              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ C1.2                           PRIM_FILE      .\pstchip.dat
+ C2.2                           PRIM_FILE      .\pstchip.dat
+ C3.2                           PRIM_FILE      .\pstchip.dat
+ C4.2                           PRIM_FILE      .\pstchip.dat
+ C5.2                           PRIM_FILE      .\pstchip.dat
+ C6.2                           PRIM_FILE      .\pstchip.dat
+ J1.2                           PRIM_FILE      .\pstchip.dat
+ J2.3                           PRIM_FILE      .\pstchip.dat
+ R1.2                           PRIM_FILE      .\pstchip.dat
+ R2.2                           PRIM_FILE      .\pstchip.dat
+ R3.2                           PRIM_FILE      .\pstchip.dat
+ R4.2                           PRIM_FILE      .\pstchip.dat
+ R5.2                           PRIM_FILE      .\pstchip.dat
+ R6.2                           PRIM_FILE      .\pstchip.dat
+ R7.2                           PRIM_FILE      .\pstchip.dat
+ R8.2                           PRIM_FILE      .\pstchip.dat
+ R9.2                           PRIM_FILE      .\pstchip.dat
+ R10.2                          PRIM_FILE      .\pstchip.dat
+ U1.4                           PRIM_FILE      .\pstchip.dat
+ U2.4                           PRIM_FILE      .\pstchip.dat
+ U3.4                           PRIM_FILE      .\pstchip.dat
+ U4.4                           PRIM_FILE      .\pstchip.dat
+ U5.3                           PRIM_FILE      .\pstchip.dat
+ U6.3                           PRIM_FILE      .\pstchip.dat
+ VR1.2                          PRIM_FILE      .\pstchip.dat
+|------------------------------------------------------------------------------|
+|   total ECO changes reported  128                                            |
+|------------------------------------------------------------------------------|
