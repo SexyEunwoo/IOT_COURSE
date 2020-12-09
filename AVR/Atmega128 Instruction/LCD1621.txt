@@ -1,0 +1,71 @@
+레지스터 종류
+
+LCD Controller는 2개의 1바이트 레지스터가 있다(IR, DR)
+
+IR = 쓰기전용 레지스터로 명령어 코드를 쓴다(ex: 화면지우기, 커서이동, DD RAM, CG RAM 설정 등등)
+DR(Data Register)
+ - 쓰기읽기 전용 레지스터
+ - DD RAM, CG RAM에서 데이터를 읽어오거나 쓰거나 가능
+ - 이 레지스터에 쓰여진 값은 자동으로 DD RAM이나 CG램에 써진다(내부컨트롤러)
+ 
+RS = IR과 DR중 어떤 것을 선택할지 결정
+R/W = Read / Write 모드 설정
+
+RS = 0, R/W = 0  ==> 명령어 쓰기 모드
+RS = 0, R/W = 1  ==> Busy Flag 상태 읽기
+RS = 1, R/W = 0  ==> 데이터 쓰기 모드
+
+BF(Busy Flag) : 내부적으로 명령어를 처리중이라면 BF가 1이 된다.
+                BF를 확인하려면 DB7을 읽으면 된다
+
+AC(Address Counter) : DD RAM과 CG RAM에 주소를 지정해준다
+                      IR에 들어온 값이 AC로 들어오온다. 이 값에 따라서 DD램의 주소를 지정할지 CG램의 주소를 지정할지 결정됌
+					  들어온 값에 따라 처리가 끝나면 자동적으로 AC는 1이 증가된다(또는 1이 감소 -> Entry Mode Set에 의해 결정)
+
+DD RAM(Display Data Ram)
+ - 1바이트 코드로 표현되는 display data를 가지는 레지스터
+ - 용량은 총 80x8bit 로 80byte이다
+ - display에 사용되지 않을 때는 general data RAM으로 사용될 수 있다
+ - DD RAM Address는 16진수로 표현되며 AC이다
+ - AC는 "Set DD RAM Address"명령을 이용해서 바꿀 수 있으며 "Read Busy Flag and Address"명령으로 읽혀질 수 있다
+ - AC를 바꾸거나 읽을 때 DB0 ~ DB6에 데이터를 쓰거나 읽어들이면 된다
+ - 각 자리의 기본 위치값
+ 첫째줄 00 01 ~ 0F
+ 둘쨰줄 40 41 ~ 4F
+ 
+CG ROM
+ - 5x7 또는 5x10dot 1바이트 크기의 문자패턴을 생성한다
+ - 192가지의 5x7 또는 32가지의 5x10dot 패턴을 생성 가능
+
+CG RAM
+ - 64 x 8bit 크기의 램이다(유저가 직접 문자 지정 가능)
+ - 5x7dot -> 8가지의 패턴 가능, 5x10 -> 4타입의 패턴 가능
+ 
+
+
+작동 방식
+
+1. 4비트 or 8비트 모드
+ - 4비트모드 : DB0 ~ DB3은 사용되지 읺는다. 명령어 모드가 끝나기 전에 데이터를 2번 전송
+ - 8비트 모드 : D0 ~ DB7 모두 사용
+
+2. 초기화
+ - 전원이 인가되면 10ms후에 busy flag가 0으로 내려간다.(그 사이에 초기화가 되지만 software적으로 다시 해 주는것이 낫다)
+ 2-1) 전원이 인가되면 _delay_ms(30);
+ 2-2) Function Set
+  - DL = 1 or 0(8bit operation or 4bit operation)
+  - N = 1 or 0(2line or 1line)
+  - F = 1 or 0(표시폰트 타입을 정함, 5x11 or 5x8)
+ 2-3) _delay_us(40);
+ 2-4) DIsplay ON/OFF Control
+  - D = 1 or 0(Display On or Display Off)
+  - C = 1 or 0(Cursor On or Cursor Off)
+  - B = 1 or 0(Blink On or Blin Off)
+ 2-5) _delay_us(40);
+ 2-6) Display Clear
+ 2-7) _delay_ms(2);
+ 2-8) Entry Mode Set
+  - I/D = 1 or 0(increase mode or decrease mode)
+  - SH = 1 or 0(화면 이동, shift operation or none)
+ 
+ 초기화 끝
