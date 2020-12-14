@@ -1,12 +1,12 @@
-#ifndef CUSTOM_LCD_PIN	// CUSTOM_LCD_PINÀ» »ç¿ëÀÚ°¡ Á÷Á¢ Á¤ÀÇÇÏÁö ¾ÊÀ» °æ¿ì default°ª PORTC
+#ifndef DB	// CUSTOM_LCD_PINì„ ì‚¬ìš©ìžê°€ ì§ì ‘ ì •ì˜í•˜ì§€ ì•Šì„ ê²½ìš° defaultê°’ PORTC
 #define DB PORTC
 #endif
 
-#ifndef CUSTOM_LCD_RSWC	// CUSTOM_LCD_RSWC¸¦ »ç¿ëÀÚ°¡ Á÷Á¢ Á¤ÀÇÇÏÁö ¾ÊÀ» °æ¿ì default°ª PORTA
-#define MODE_SELECT PORTA	// 0 ~ 2±îÁö ¼ø¼­´ë·Î RS, RW, E
+#ifndef MODE_SELECT	// CUSTOM_LCD_RSWCë¥¼ ì‚¬ìš©ìžê°€ ì§ì ‘ ì •ì˜í•˜ì§€ ì•Šì„ ê²½ìš° defaultê°’ PORTA
+#define MODE_SELECT PORTA	// 0 ~ 2ê¹Œì§€ ìˆœì„œëŒ€ë¡œ RS, RW, E
 #endif
 
-#ifndef CUSTOM_F_CPU	// CUSTOM_F_CPU¸¦ »ç¿ëÀÚ°¡ Á÷Á¢ Á¤ÀÇÇÏÁö ¾ÊÀ» °æ¿ì default°ª 16MHz
+#ifndef F_CPU	// CUSTOM_F_CPUë¥¼ ì‚¬ìš©ìžê°€ ì§ì ‘ ì •ì˜í•˜ì§€ ì•Šì„ ê²½ìš° defaultê°’ 16MHz
 #define F_CPU 16000000UL
 #endif
 
