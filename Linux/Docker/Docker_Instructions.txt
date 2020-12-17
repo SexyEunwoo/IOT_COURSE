@@ -10,8 +10,10 @@
 컨테이너를 새로운 이미지로 만드는 방법
  - docker commit centos-ssh centos-ssh_20201116
 
+이미지 이름 변경(복사본이 생김)
+ - docker tag 기존이름 새로운이름
+
 새로운 이미지를 배포용 이미지를 내 도커 아이디에 올리는 방법
- - docker tag centos-ssh_20201116(이미지이름) dmsdndla/centos-ssh_20201116(내아이디/이미지이름)
  - docker push dmsdndla/centos-ssh_20201116(내아이디/이미지이름)
  ★ 파일의 이름이 ID/name 형식이면 업로드 되는듯
 
