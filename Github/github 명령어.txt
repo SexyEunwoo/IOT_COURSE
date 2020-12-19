@@ -1,0 +1,28 @@
+github 명령어 정리
+
+1. 설정 및 초기화
+ 1-1 전역 사용자명 및 이메일 구성
+  - git config --global user.name "My name"
+  - git config --global user.email "My email"
+ 1-2 저장소별 사용자명 및 이메일 구성(해당 디렉터리로 이동 후)
+  - git config user.name "My name"
+  - git config user.email "My email"
+ 1-3 정보 조회
+  - git config --global --list
+  - git config --list
+  
+2. 주요 명령어
+ - git init : 현재 디렉터리를 깃 레포지터리로 설정
+ - git remote add origin "원격서버주소" : 현재 디렉터리를 원격저장소로 사용( 원격서버와 디렉터리 연결 )
+ - git pull "원격서버주소" "branch" : 원격서버의 브랜치 내용을 현재 디렉토리로 가져온다 ( 서버와 디렉터리가 연결되어야 한다 )
+ - git clone "원격서버주소" : 현재 디렉터리에 원격서버주소의 내용을 복사한다
+ 
+ - git status : 현재 디렉터리 상태 출력
+ - git add "파일" : 스테이징할 파일 추가
+ - git commit -m "메시지" : 대기파일 스테이징
+ - git push -u : 원격서버에 푸시(실제 파일 업로드)
+ 
+3. Git 이력
+ - git log : 모든 로그 보기
+ - git log --since="6hours" : 6시간 동안의 로그 확인
+ - git log --before="2days" : 2일전까지 로그 확인
