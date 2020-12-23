@@ -1,9 +1,4 @@
-#include "stdint.h"
-#ifndef _LIB_ARMCPU_H_
-#include "armcpu.h"
-#ifndef _INCLUDE_STDINT_H_
-#ifndef _LIB_
-#ifndef _LIB_BIT_H_
+
 if has("syntax")
     syntax on
 endif
