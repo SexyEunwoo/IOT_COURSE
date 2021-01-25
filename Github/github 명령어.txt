@@ -26,3 +26,7 @@ github 명령어 정리
  - git log : 모든 로그 보기
  - git log --since="6hours" : 6시간 동안의 로그 확인
  - git log --before="2days" : 2일전까지 로그 확인
+ 
+ 
+4. 특정 git file만 다운받기
+ - wget 해당파일raw경로
