@@ -20,6 +20,8 @@ function set()
             echo "TARGET : ${target}"
             set_configuration ${target}
         done
+	else
+		set_configuration ${target}
     fi
 }
 
@@ -37,13 +39,14 @@ function set_configuration()
         fi
     fi
 
-    # copy configure file to home dir
+    # configure set .bashrc 
     if [ ${target} == ${target_bash} ]; then
         echo "Adding .bashrc content to ~/.bashrc"
         cat ${cur_path}/${target} >> ${root_path}/${target}
         echo "Adding Done!"
     fi
 
+    # configure set .vimrc
     if [ ${target} == ${target_vi} ]; then
         echo "Copying ${target} file to home directory..."
         cp ${cur_path}/${target} ${root_path}
@@ -52,8 +55,9 @@ function set_configuration()
         echo "Vundle Plugin Download..."
         git clone https://github.com/VundleVim/Vundle.vim.git ${root_path}/.vim/bundle/Vundle.vim
         echo "Vundle Plugin Download Done!"
-		    fi
+    fi
 
+    # configure set .tmux.conf 
     if [ ${target} == ${target_tmux} ]; then
         echo "Copying ${target} file to home directory..."
         cp ${cur_path}/${target} ${root_path}
