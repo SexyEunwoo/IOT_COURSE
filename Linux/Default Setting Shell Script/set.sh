@@ -20,8 +20,12 @@ function set()
             echo "TARGET : ${target}"
             set_configuration ${target}
         done
-	else
-		set_configuration ${target}
+	elif [ ${parameter} == "bash" ]; then
+		set_configuration ${target_bash}
+	elif [ ${parameter} == "vi" ]; then
+		set_configuration ${target_vi}
+	elif [ ${parameter} == "tmux" ]; then
+		set_configuration ${target_tmux}
     fi
 }
 
