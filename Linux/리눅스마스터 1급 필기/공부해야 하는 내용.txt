@@ -26,3 +26,9 @@
 // rsync
 // grep 옵션들
 * 명령어들 인자 순서
+* who, who i am, whoiam, whoami 이중 유효하지 않은 명령어는?
+* skel의 경로(/etc/skel/*)
+* useradd 인자, grep 인자, ps 인자, grep의 awk와 같은 것들
+* SIGUP(1)의 역할
+* jobs인자
+* rsync 특징
